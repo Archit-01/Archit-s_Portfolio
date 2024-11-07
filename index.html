@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archit-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #070438, #2f2557, #070739);
+            color: #edf2f6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background: rgba(0, 0, 50, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .left {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #a9cce3;
+        }
+
+        .firstection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .leftsection {
+            font-size: 2.2rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .purple {
+            color: #9b59b6;
+            font-weight: 600;
+        }
+
+        #element {
+            color: #a9cce3;
+            font-weight: 700;
+        }
+
+        .rightsection img {
+            width: 250px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section styles */
+        .about-section, .projects-section, .contact-section {
+            text-align: center;
+            padding: 60px 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .about-section h2, .projects-section h2, .contact-section h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .about-section p, .projects-section p, .contact-section p {
+            font-size: 1rem;
+            color: #d1d8e0;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Projects Section */
+        .projects-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .projects-section ul li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .projects-section ul li:hover {
+            transform: scale(1.05);
+        }
+
+        .projects-section ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        /* Contact Section */
+        .contact-section a {
+            color: #a9cce3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-section a:hover {
+            color: #ffffff;
+        }
+
+        
+
+        /* Typing Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Show section when in view */
+        .in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Archit's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section class="firstection" id="home">
+            <div class="leftsection">
+                Hi, I'm <span class="purple">Archit Patil</span>,<br>
+                a Computer Science Student at Symbiosis Institute of Technology,<br>
+                and I'm passionate about <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="IMG_3884.jpg" alt="Archit Patil's photo">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a Computer Science student specializing in areas like web development, data science, and cloud computing. 
+                With a deep interest in technology, I constantly seek to expand my skills and take on challenging projects that 
+                allow me to apply my knowledge creatively.
+            </p>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <h2>Projects</h2>
+            <p>Here are a few projects I've worked on:</p>
+            <ul>
+                <li><a href="https://github.com/Archit-01/idea_submission_Dapp"><strong>Project 1:</strong> Industry Sponsored Project : Design and development
+                    of DAPP on Blockchain By Zbyte.</li></a>
+                <li><a href="https://github.com/Archit-01/Campus_Nexus"><strong>Project 2:</strong> Campus Nexus - Integrated Student Management
+                    System.</a></li>
+                <li><a href="https://github.com/Archit-01/Virtual_Zoo_Website"><strong>Project 3:</strong> Virtual Zoo Website.</a></li>
+                <li><a href="https://github.com/Archit-01/Employee_Payroll_Management_System"><strong>Project 4:</strong> Employee_Payroll_Management_System.</a></li>
+                <li><a href="https://github.com/Archit-01/GUI_Based_Ultrasonic_radar"><strong>Project 5:</strong> Ultrasonic Radar.</a></li>
+
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out through the following platforms:</p>
+            <p><strong>Email:</strong> <a href="mailto:architpatil2004@gmail.com">architpatil2004@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/archit-patil-398274247/" target="_blank">linkedin.com/in/architpatil</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Archit-01" target="_blank">github.com/ArchitPatil</a></p>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Development', 'Data Science', 'Cloud Computing'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+
+        // Fade-in sections on scroll
+        const sections = document.querySelectorAll('.about-section, .projects-section, .contact-section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>
