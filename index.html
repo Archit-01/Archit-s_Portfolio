@@ -15,7 +15,6 @@
             box-sizing: border-box;
         }
 
-        /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
         }
@@ -98,7 +97,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        /* Section styles */
         .about-section,
         .projects-section,
         .contact-section {
@@ -127,7 +125,6 @@
             line-height: 1.8;
         }
 
-        /* Projects Section */
         .projects-section ul {
             list-style: none;
             padding: 0;
@@ -152,7 +149,6 @@
             color: white;
         }
 
-        /* Contact Section */
         .contact-section a {
             color: #a9cce3;
             text-decoration: none;
@@ -163,7 +159,6 @@
             color: #ffffff;
         }
 
-        /* Typing Animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -176,164 +171,240 @@
             }
         }
 
-        /* Show section when in view */
         .in-view {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .firstection {
+                flex-direction: column;
+                padding: 20px;
+                width: 90%;
+            }
+
+            .leftsection {
+                font-size: 1.8rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .rightsection img {
+                width: 200px;
+            }
+
+            .about-section h2,
+            .projects-section h2,
+            .contact-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-section p,
+            .projects-section p,
+            .contact-section p {
+                font-size: 0.9rem;
+            }
+
+            .projects-section ul li {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav .left {
+                font-size: 1.5rem;
+            }
+
+            .leftsection {
+                font-size: 1.5rem;
+            }
+
+            .rightsection img {
+                width: 150px;
+            }
+
+            .about-section h2,
+            .projects-section h2,
+            .contact-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .about-section p,
+            .projects-section p,
+            .contact-section p {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">Archit's Portfolio</div>
-            <div class="right">
+    <body>
+        <header>
+            <nav>
+                <div class="left">Archit's Portfolio</div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <!-- Home Section -->
+            <section class="firstection" id="home">
+                <div class="leftsection">
+                    Hi, I'm <span class="purple">Archit Patil</span>,<br>
+                    a Computer Science Student at Symbiosis Institute of Technology,<br>
+                    and I'm passionate about <span id="element"></span>
+                </div>
+                <div class="rightsection">
+                    <img src="IMG_3884.jpg" alt="Archit Patil's photo">
+                </div>
+            </section>
+    
+            <!-- About Section -->
+            <section class="about-section" id="about">
+                <h2>About Me</h2>
+                <p>
+                    I'm a Computer Science student specializing in areas like web development, data science, and cloud
+                    computing.
+                    With a deep interest in technology, I constantly seek to expand my skills and take on challenging
+                    projects that
+                    allow me to apply my knowledge creatively.
+                </p>
+                <br>
+                <hr>
+                <br>
+    
+                <h3>Education</h3>
+                <p>Symbiosis Institute of Technology - B Tech in Computer Science [2022-2026]</p>
+                <p>Completed My jr college From - P Jog Jr college [2020-2022] </p>
+                <p>Completed My Schooling from - Sinhagad Spring Dale School [2010-2020]</p>
+    
+                <br>
+                <hr>
+                <br>
+    
+                <h3>Skills</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>Programming Languages: Python, JavaScript, C++ , Java</li>
+                    <li>Web Development: HTML, CSS, JavaScript, React</li>
+                    <li>Data Science: Machine Learning, Data Analysis, Pandas, NumPy</li>
+                    <li>Cloud Computing: AWS, Azure</li>
                 </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Home Section -->
-        <section class="firstection" id="home">
-            <div class="leftsection">
-                Hi, I'm <span class="purple">Archit Patil</span>,<br>
-                a Computer Science Student at Symbiosis Institute of Technology,<br>
-                and I'm passionate about <span id="element"></span>
-            </div>
-            <div class="rightsection">
-                <img src="IMG_3884.jpg" alt="Archit Patil's photo">
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about-section" id="about">
-            <h2>About Me</h2>
-            <p>
-                I'm a Computer Science student specializing in areas like web development, data science, and cloud
-                computing.
-                With a deep interest in technology, I constantly seek to expand my skills and take on challenging
-                projects that
-                allow me to apply my knowledge creatively.
-            </p>
-            <br>
-            <hr>
-            <br>
-
-            <h3>Education</h3>
-            <p>Symbiosis Institute of Technology - B Tech in Computer Science [2022-2026]</p>
-            <p>Completed My jr college From - P Jog Jr college [2020-2022] </p>
-            <p>Completed My Schooling from - Sinhagad Spring Dale School [2010-2020]</p>
-
-            <br>
-            <hr>
-            <br>
-
-            <h3>Skills</h3>
-            <ul>
-                <li>Programming Languages: Python, JavaScript, C++ , Java</li>
-                <li>Web Development: HTML, CSS, JavaScript, React</li>
-                <li>Data Science: Machine Learning, Data Analysis, Pandas, NumPy</li>
-                <li>Cloud Computing: AWS, Azure</li>
-            </ul>
-
-            <br>
-            <hr>
-            <br>
-
-            <h3>Co-curricular and Extracurricular Activities</h3>
-            <p> Our team got Selected for Smart India Hackathon [2024] </p>
-            <p> Played Football At ZP (Under 16) </p>
-            <p> Won 3rd price in Interschool Dance competition </p>
-
-
-            <br>
-            <hr>
-            <br>
-
-            <h3>Achievements</h3>
-            <ul>
-                <li>Our team got Selected for Smart India Hackathon [2024]</li>
-                <li>Certification in Introduction to data science
-                    By Cisco</li>
-                <li>Certification in Foundations: Data, Data, Everywhere
-                    By Google</li>
-                <li>Certification in Generic Online training in cyber Security
-                    By Minist</li>
-
-            </ul>
-
-            <br>
-            <hr>
-            <br>
-
-            <h3>Resume</h3>
-            <p>
-                You can view my full resume <a href="https://github.com/Archit-01/Resume_Archit-/blob/main/Archit_Resume%20(1).pdf"
-                    target="_blank">here</a>.
-            </p>
-            <br>
-            <hr>
-            <br>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects-section" id="projects">
-            <h2>Projects</h2>
-            <p>Here are a few projects I've worked on:</p>
-            <ul>
-                <li><a href="https://github.com/Archit-01/idea_submission_Dapp"><strong>Project 1:</strong> Industry
-                        Sponsored Project: Design and development of DAPP on Blockchain by Zbyte.</a></li>
-                <li><a href="https://github.com/Archit-01/Campus_Nexus"><strong>Project 2:</strong> Campus Nexus -
-                        Integrated Student Management System.</a></li>
-                <li><a href="https://github.com/Archit-01/Virtual_Zoo_Website"><strong>Project 3:</strong> Virtual Zoo
-                        Website.</a></li>
-                <li><a href="https://github.com/Archit-01/Employee_Payroll_Management_System"><strong>Project
-                            4:</strong> Employee Payroll Management System.</a></li>
-                <li><a href="https://github.com/Archit-01/GUI_Based_Ultrasonic_radar"><strong>Project 5:</strong>
-                        Ultrasonic Radar.</a></li>
-            </ul>
-        </section>
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to reach out through the following platforms:</p>
-            <p><strong>Email:</strong> <a href="mailto:architpatil2004@gmail.com">architpatil2004@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/archit-patil-398274247/"
-                    target="_blank">linkedin.com/in/architpatil</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/Archit-01"
-                    target="_blank">github.com/ArchitPatil</a></p>
-        </section>
-    </main>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Web Development', 'Data Science', 'Cloud Computing'],
-            typeSpeed: 50,
-            backSpeed: 25,
-            loop: true
-        });
-
-        // Fade-in sections on scroll
-        const sections = document.querySelectorAll('.about-section, .projects-section, .contact-section');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
+    
+                <br>
+                <hr>
+                <br>
+    
+                <h3>Co-curricular and Extracurricular Activities</h3>
+                <p> Our team got Selected for Smart India Hackathon [2024] </p>
+                <p> Played Football At ZP (Under 16) </p>
+                <p> Won 3rd price in Interschool Dance competition </p>
+    
+    
+                <br>
+                <hr>
+                <br>
+    
+                <h3>Achievements</h3>
+                <ul>
+                    <li>Our team got Selected for Smart India Hackathon [2024]</li>
+                    <li>Certification in Introduction to data science
+                        By Cisco</li>
+                    <li>Certification in Foundations: Data, Data, Everywhere
+                        By Google</li>
+                    <li>Certification in Generic Online training in cyber Security
+                        By Minist</li>
+    
+                </ul>
+    
+                <br>
+                <hr>
+                <br>
+    
+                <h3>Resume</h3>
+                <p>
+                    You can view my full resume <a href="https://github.com/Archit-01/Resume_Archit-/blob/main/Archit_Resume%20(1).pdf"
+                        target="_blank">here</a>.
+                </p>
+                <br>
+                <hr>
+                <br>
+            </section>
+    
+            <!-- Projects Section -->
+            <section class="projects-section" id="projects">
+                <h2>Projects</h2>
+                <p>Here are a few projects I've worked on:</p>
+                <ul>
+                    <li><a href="https://github.com/Archit-01/idea_submission_Dapp"><strong>Project 1:</strong> Industry
+                            Sponsored Project: Design and development of DAPP on Blockchain by Zbyte.</a></li>
+                    <li><a href="https://github.com/Archit-01/Campus_Nexus"><strong>Project 2:</strong> Campus Nexus -
+                            Integrated Student Management System.</a></li>
+                    <li><a href="https://github.com/Archit-01/Virtual_Zoo_Website"><strong>Project 3:</strong> Virtual Zoo
+                            Website.</a></li>
+                    <li><a href="https://github.com/Archit-01/Employee_Payroll_Management_System"><strong>Project
+                                4:</strong> Employee Payroll Management System.</a></li>
+                    <li><a href="https://github.com/Archit-01/GUI_Based_Ultrasonic_radar"><strong>Project 5:</strong>
+                            Ultrasonic Radar.</a></li>
+                </ul>
+            </section>
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact">
+                <h2>Contact Me</h2>
+                <p>If you'd like to get in touch, feel free to reach out through the following platforms:</p>
+                <p><strong>Email:</strong> <a href="mailto:architpatil2004@gmail.com">architpatil2004@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/archit-patil-398274247/"
+                        target="_blank">linkedin.com/in/architpatil</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/Archit-01"
+                        target="_blank">github.com/ArchitPatil</a></p>
+            </section>
+        </main>
+    
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['Web Development', 'Data Science', 'Cloud Computing'],
+                typeSpeed: 50,
+                backSpeed: 25,
+                loop: true
             });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => observer.observe(section));
-    </script>
+    
+            // Fade-in sections on scroll
+            const sections = document.querySelectorAll('.about-section, .projects-section, .contact-section');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            sections.forEach(section => observer.observe(section));
+        </script>
+    </body>
 </body>
 
 </html>
